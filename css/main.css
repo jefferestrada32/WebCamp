@@ -333,14 +333,24 @@
             /**header**/
             
             .hero {
-                background-image: url(../img/encabezado.jpg);
+                background-image: url(../img/event-1597531_1920.jpg);
                 height: 100vh;
                 background-position: top center;
                 background-size: cover;
             }
             
             .contenido-header {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 80%;
                 padding-top: 40px;
+            }
+            
+            @media (min-width:768px) {
+                .contenido-header {
+                    height: 80%;
+                }
             }
             
             .redes-sociales {
@@ -349,12 +359,16 @@
             
             .redes-sociales a {
                 color: white;
-                font-size: 2em;
+                font-size: 2.5em;
                 margin-right: 20px;
             }
             
             .redes-sociales a:last-child {
                 margin-right: 0;
+            }
+            
+            .redes-sociales a:hover {
+                color: #fe4918;
             }
             
             .informacion-evento {
@@ -557,6 +571,10 @@
                 width: 100%;
                 filter: gray;
                 -webkit-filter: grayscale(1);
+            }
+            
+            .invitados h2 {
+                margin: 0;
             }
             
             .invitado img:hover {
