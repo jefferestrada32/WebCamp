@@ -26,6 +26,22 @@
         var cantCamisas = document.getElementById('camisa-evento');
 
         calcular.addEventListener('click', calcularTotal);
+        pase_dia.addEventListener('change', mostrarDias);
+        pase_dosDias.addEventListener('change', mostrarDias);
+        pase_completo.addEventListener('change', mostrarDias);
+
+        nombre.addEventListener('blur', validarCampos);
+        apellido.addEventListener('blur', validarCampos);
+        emial.addEventListener('blur', validarCampos);
+
+        function validarCampos(event) {
+            if (this.value == '') {
+                error_div.style.display = 'block';
+                error_div.innerHTML = "Este campo es obligatorio";
+            } else {
+                error_div.style.display = 'none';
+            }
+        }
 
         function calcularTotal(event) {
             event.preventDefault();
@@ -65,10 +81,32 @@
                     for (var i = 0; i < listaProductos.length; i++) {
                         resultado.innerHTML += listaProductos[i] + '<br/>'
                     }
-                    suma.innerHTML = totalPagar.toFixed(2) + ' COP';
+                    suma.innerHTML = totalPagar.toFixed(2) + '<span> COP </span>';
                 }
             }
+        } // Cierre de funcion calcular
+
+
+        function mostrarDias(event) {
+            let diasElegidos = [];
+
+            if (pase_dia.value >= 1) {
+                diasElegidos.push('viernes');
+            }
+
+            if (pase_dosDias.value >= 1) {
+                diasElegidos.push('viernes', 'sabado');
+            }
+
+            if (pase_completo.value >= 1) {
+                diasElegidos.push('viernes', 'sabado', 'domingo');
+            }
+
+            for (var i = 0; i < diasElegidos.length; i++) {
+                document.getElementById(diasElegidos[i]).style.display = 'block';
+            }
         }
+
 
 
     });
