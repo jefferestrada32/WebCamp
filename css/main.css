@@ -524,6 +524,22 @@
                 font-family: 'Oswald', sans-serif;
                 text-align: center;
                 margin-bottom: 10px;
+                position: relative;
+            }
+            
+            .menu-programa a.activo::after {
+                position: absolute;
+                content: '';
+                left: 0;
+                right: 0;
+                margin-right: auto;
+                margin-left: auto;
+                height: 20px;
+                width: 30px;
+                background-image: url(../img/talleres-flecha.jpg);
+                background-repeat: no-repeat;
+                bottom: -40px;
+                right: -20px;
             }
             
             .menu-programa i,
@@ -538,6 +554,11 @@
                     display: flex;
                     justify-content: space-around;
                 }
+            }
+            
+            #seminarios,
+            #conferencias {
+                display: none;
             }
             /*Detalle del evento*/
             
@@ -753,7 +774,6 @@
             
             .mapa {
                 height: 420px;
-                background-color: blueviolet;
             }
             /*Testimoniales*/
             
@@ -972,6 +992,10 @@
                 box-shadow: none;
             }
             
+            .paquetes .precios .tarjeta {
+                background-color: white;
+            }
+            
             .paquetes .precios .tarjeta input {
                 clear: both;
                 width: 100px;
@@ -999,6 +1023,7 @@
             
             .contenido-dia {
                 padding: 20px;
+                display: none;
             }
             
             @media(min-width:768px) {

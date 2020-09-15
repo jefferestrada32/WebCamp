@@ -1,9 +1,9 @@
 // Se ejecuta despues de que carga todo el html
 (function() {
     'use strict';
-
     var regalo = document.getElementById('regalo');
     document.addEventListener('DOMContentLoaded', function() {
+
         // Datos de usuarios
         var nombre = document.getElementById('nombre');
         var apellido = document.getElementById('apellido');
@@ -106,9 +106,50 @@
                 document.getElementById(diasElegidos[i]).style.display = 'block';
             }
         }
-
-
-
     });
 
 })();
+
+
+
+$(function() {
+
+    // Programa  del evento
+    $('.menu-programa a:first').addClass('activo');
+    $('.menu-programa a').on('click', function() {
+        $('.menu-programa a').removeClass('activo');
+        $(this).addClass('activo');
+        var enlace = $(this).attr('href');
+        $('.ocultar').fadeOut();
+        $(enlace).fadeIn();
+        return false;
+    })
+
+    // animar los numeros
+    let verificarScroll = 0;
+    $(window).bind('scroll', function() {
+        if ($(window).scrollTop() >= $('.invitados').offset().top + $('.invitados').outerHeight() - window.innerHeight) {
+            if (verificarScroll == 0) {
+                verificarScroll = 1;
+                $('.resumen-evento li:nth-child(1) p').animateNumber({ number: 6 }, 2500);
+                $('.resumen-evento li:nth-child(2) p').animateNumber({ number: 15 }, 2500);
+                $('.resumen-evento li:nth-child(3) p').animateNumber({ number: 3 }, 2500);
+                $('.resumen-evento li:nth-child(4) p').animateNumber({ number: 12 }, 2500);
+            }
+        }
+    });
+
+    // cuenta regresiva
+    $('.cuenta-regresiva').countdown('2020/10/10', function(event) {
+        $('#dias').html(event.strftime('%D'));
+        $('#horas').html(event.strftime('%H'));
+        $('#minutos').html(event.strftime('%M'));
+        $('#segundos').html(event.strftime('%S'));
+    });
+
+
+
+
+
+
+});

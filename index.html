@@ -89,7 +89,7 @@
                     <nav class="menu-programa">
                         <a href="#talleres"> <i class="fas fa-code"></i> Talleres</a>
                         <a href="#conferencias"> <i class="fas fa-comment"></i>Conferencias</a>
-                        <a href="#semimarios"> <i class="fas fa-university"></i>Seminarios</a>
+                        <a href="#seminarios"> <i class="fas fa-university"></i>Seminarios</a>
                     </nav>
 
                     <div id="talleres" class="info-curso ocultar">
@@ -110,6 +110,51 @@
                             <a href="" class="boton">Ver todos</a>
                         </div>
                     </div>
+
+
+
+                    <div id="conferencias" class="info-curso ocultar">
+                        <div class="detalle-evento">
+                            <h3>Diseño UI/UX para moviles</h3>
+                            <p> <i class="fas fa-clock"></i> 4:00pm</p>
+                            <p> <i class="fas fa-calendar-alt"></i> 27 de septiembre</p>
+                            <p> <i class="fas fa-user"></i> Jefferson Estrada</p>
+                        </div>
+
+                        <div class="detalle-evento">
+                            <h3>Responsive web design</h3>
+                            <p> <i class="fas fa-clock"></i> 3:30pm</p>
+                            <p> <i class="fas fa-calendar-alt"></i> 28 de septiembre</p>
+                            <p> <i class="fas fa-user"></i> Jefferson Estrada</p>
+                        </div>
+                        <div class="boton-contenedor">
+                            <a href="" class="boton">Ver todos</a>
+                        </div>
+                    </div>
+
+                    <div id="seminarios" class="info-curso ocultar">
+                        <div class="detalle-evento">
+                            <h3>Cómo ser freelancer</h3>
+                            <p> <i class="fas fa-clock"></i> 10:00am</p>
+                            <p> <i class="fas fa-calendar-alt"></i> 14 de septiembre</p>
+                            <p> <i class="fas fa-user"></i> Jefferson Estrada</p>
+                        </div>
+
+                        <div class="detalle-evento">
+                            <h3>Tecnologias del futuro</h3>
+                            <p> <i class="fas fa-clock"></i> 2:00pm</p>
+                            <p> <i class="fas fa-calendar-alt"></i> 14 de septiembre</p>
+                            <p> <i class="fas fa-user"></i> Jefferson Estrada</p>
+                        </div>
+                        <div class="boton-contenedor">
+                            <a href="" class="boton">Ver todos</a>
+                        </div>
+                    </div>
+
+
+
+
+
                 </div>
             </div>
         </div>
@@ -161,19 +206,19 @@
         <div class="contenedor">
             <ul class="resumen-evento">
                 <li>
-                    <p class="numero">6</p>
+                    <p class="numero"></p>
                     <span>Invitados</span>
                 </li>
                 <li>
-                    <p class="numero">15</p>
+                    <p class="numero"></p>
                     <span>Talleres</span>
                 </li>
                 <li>
-                    <p class="numero">3</p>
+                    <p class="numero"></p>
                     <span>Días</span>
                 </li>
                 <li>
-                    <p class="numero">9</p>
+                    <p class="numero"></p>
                     <span>Conferencias</span>
                 </li>
             </ul>
@@ -282,19 +327,19 @@
         <div class="cuenta-regresiva contenedor">
             <ul>
                 <li>
-                    <p class="numero">90</p>
+                    <p id="dias" class="numero"></p>
                     <p>Dias</p>
                 </li>
                 <li>
-                    <p class="numero">15</p>
+                    <p id="horas" class="numero"></p>
                     <p>Horas</p>
                 </li>
                 <li>
-                    <p class="numero">3</p>
+                    <p id="minutos" class="numero"></p>
                     <p>Minutos</p>
                 </li>
                 <li>
-                    <p class="numero">8</p>
+                    <p id="segundos" class="numero"></p>
                     <p>Segundos</p>
                 </li>
             </ul>
@@ -331,9 +376,15 @@
         </div>
     </footer>
 
-    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+
+    <script src="/js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/jquery.animateNumber.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="/js/main.js"></script>
+
+
+
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
