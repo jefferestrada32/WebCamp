@@ -331,6 +331,12 @@
                 background-color: #e33000;
             }
             /**header**/
+            /*Lettering*/
+            
+            .nombre-sitio span {
+                position: relative;
+                text-shadow: 0 0 30px black;
+            }
             
             .hero {
                 background-image: url(../img/event-1597531_1920.jpg);
@@ -396,8 +402,11 @@
             /*Barra*/
             
             .barra {
+                position: sticky;
+                top: 0;
                 background-color: #353535;
                 padding: 20px 0;
+                z-index: 3;
             }
             
             .logo {
@@ -408,45 +417,67 @@
                 width: 100%;
             }
             
-            .navegacion-principal {
-                display: none;
+            .barra .contenedor .contenedorr {
+                display: flex;
             }
             
-            .barra .contenedor {
+            .barra .contenedor .contenedorr {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
             }
             
+            .navegacion-principal a {
+                font-family: 'Oswald', sans-serif;
+                color: white;
+                text-decoration: none;
+                margin-right: 20px;
+                font-size: 1.3em;
+                transition: all .3s ease;
+                padding: 10px 20px;
+                text-transform: uppercase;
+            }
+            
+            .navegacion-principal a:last-child {
+                margin-right: 0;
+                border: 2px solid #fe4918;
+                color: #fe4918;
+            }
+            
+            .navegacion-principal {
+                display: none;
+                width: 100%;
+                display: block;
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
             @media (min-width:768px) {
                 .logo {
-                    width: 33%;
-                }
-                .navegacion-principal {
-                    width: 66%;
-                    display: block;
-                    text-align: right;
-                }
-                .navegacion-principal a {
-                    font-family: 'Oswald', sans-serif;
-                    color: white;
-                    text-decoration: none;
-                    margin-right: 20px;
-                    font-size: 1.3em;
-                    transition: all .3s ease;
-                    padding: 10px 20px;
-                    text-transform: uppercase;
-                }
-                .navegacion-principal a:last-child {
-                    margin-right: 0;
-                    border: 2px solid #fe4918;
-                    color: #fe4918;
+                    width: 100%;
                 }
                 .navegacion-principal a:last-child:hover {
                     background-color: white;
                 }
                 .navegacion-principal a:hover {
                     background-color: #fe4918;
+                }
+                .navegacion-principal {
+                    display: block !important;
+                    flex-direction: row;
+                }
+                .barra .contenedor {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .contenedorr {
+                    flex-basis: 30%;
+                }
+                .navegacion-principal {
+                    flex-basis: 70%;
                 }
             }
             /*Menu movil*/
@@ -527,19 +558,21 @@
                 position: relative;
             }
             
-            .menu-programa a.activo::after {
-                position: absolute;
-                content: '';
-                left: 0;
-                right: 0;
-                margin-right: auto;
-                margin-left: auto;
-                height: 20px;
-                width: 30px;
-                background-image: url(../img/talleres-flecha.jpg);
-                background-repeat: no-repeat;
-                bottom: -40px;
-                right: -20px;
+            @media (min-width:768px) {
+                .menu-programa a.activo::after {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    right: 0;
+                    margin-right: auto;
+                    margin-left: auto;
+                    height: 20px;
+                    width: 30px;
+                    background-image: url(../img/talleres-flecha.jpg);
+                    background-repeat: no-repeat;
+                    bottom: -40px;
+                    right: -20px;
+                }
             }
             
             .menu-programa i,
@@ -822,7 +855,7 @@
             }
             
             .info-testimonial {
-                padding: 0;
+                padding: 0 0 10px 0;
                 display: flex;
                 justify-content: space-around;
             }
@@ -978,12 +1011,21 @@
                 padding: 20px;
             }
             
+            @media (min-width:330px) {
+                #email {
+                    margin-left: 22px;
+                }
+            }
+            
             @media (min-width:768px) {
                 .registro-usuario {
                     display: flex;
                 }
                 .campo {
                     flex-basis: 33.3%;
+                }
+                #email {
+                    margin-left: 0;
                 }
             }
             
@@ -1041,8 +1083,24 @@
             }
             
             .caja-resumen {
-                display: flex;
+                text-align: center;
                 padding: 20px;
+            }
+            
+            .orden input[type="number"] {
+                margin: 0 auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            
+            @media (min-width:768px) {
+                .caja-resumen {
+                    text-align: left;
+                    display: flex;
+                }
+                .orden input[type="number"] {
+                    margin: 10px 0;
+                }
             }
             
             .caja-resumen div {
@@ -1057,4 +1115,10 @@
             .caja-resumen div input[type=button],
             input[type=submit] {
                 margin: 15px auto !important;
+            }
+            /*conferencia*/
+            
+            .galeria a {
+                display: inline-block;
+                margin-bottom: 5px;
             }

@@ -1,72 +1,4 @@
-<!doctype html>
-<html class="no-js" lang="">
-
-<head>
-    <meta charset="utf-8">
-    <title>WebCamp</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta property="og:title" content="">
-    <meta property="og:type" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
-
-
-    <link rel="apple-touch-icon" href="icon.png">
-    <!-- Place favicon.ico in the root directory -->
-    <script src="https://kit.fontawesome.com/9c0c2b7e0b.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-
-    <meta name="theme-color" content="#fafafa">
-</head>
-
-<body>
-
-    <!-- Add your site or application content here -->
-    <header class="site-header">
-        <div class="hero">
-            <div class="contenido-header">
-                <nav class="redes-sociales">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </nav>
-                <div class="informacion-evento">
-                    <div class="info">
-                        <p class="fecha"><i class="far fa-calendar-alt"></i> 18-08 Ago</p>
-                        <p class="ciudad"><i class="fas fa-map-pin"></i> Medellin, CO</p>
-                    </div>
-
-
-                    <h1 class="nombre-sitio">WebCamp</h1>
-                    <p class="slogan">La mejor conferencia de <span>diseño web</span></p>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="barra">
-        <div class="contenedor">
-            <div class="logo">
-                <img src="img/logo.svg" alt="">
-            </div>
-            <div class="menu-movil">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav class="navegacion-principal">
-                <a href="#">Conferencia</a>
-                <a href="#">Calendario</a>
-                <a href="#">Invitados</a>
-                <a href="registro.html">Reservaciones</a>
-            </nav>
-        </div>
-    </div>
+<?php include_once 'includes/templates/header.php'; ?>
 
     <section class="seccion contenedor">
         <h2>La mejor conferencia de diseño web en español</h2>
@@ -75,7 +7,7 @@
 
     <section class="programa">
         <div class="contenedor-video">
-            <video autoplay loop poster="img/bg-talleres.jpg">
+            <video autoplay loop>  <!-- poster="img/bg-talleres.jpg"-->
                 <source src="video/video.mp4" type="video/mp4">
                 <source src="video/video.webm" type="video/webm">
                 <source src="video/video.ogv" type="video/ogv">
@@ -234,39 +166,39 @@
                 <p class="precio">
                     $30
                 </p>
+                <h3>Pase por un días</h3>
+                <div class="descripcion">
+                    <p><i class="fas fa-check"></i> Bocadillos gratis</p>
+                    <p><i class="fas fa-check"></i>Todas las conferencias</p>
+                    <p><i class="fas fa-check"></i>Todos los talleres</p>
+                </div>
+                <a href="registro.php" class="boton boton-comprar">comprar</a>
+            </div>
+
+            <div class="tarjeta tarjeta-medio">
+                <p class="precio" style="font-weight: bold;">
+                    $50
+                </p>
+                <h3>Pase  completo</h3>
+                <div class="descripcion">
+                    <p><i class="fas fa-check"></i> Bocadillos gratis</p>
+                    <p><i class="fas fa-check"></i>Todas las conferencias</p>
+                    <p><i class="fas fa-check"></i>Todos los talleres</p>
+                </div>
+                <a href="registro.php" class="boton boton-comprar">comprar</a>
+            </div>
+
+            <div class="tarjeta">
+                <p class="precio" >
+                    $45
+                </p>
                 <h3>Pase por dos días</h3>
                 <div class="descripcion">
                     <p><i class="fas fa-check"></i> Bocadillos gratis</p>
                     <p><i class="fas fa-check"></i>Todas las conferencias</p>
                     <p><i class="fas fa-check"></i>Todos los talleres</p>
                 </div>
-                <a href="" class="boton boton-comprar">comprar</a>
-            </div>
-
-            <div class="tarjeta tarjeta-medio">
-                <p class="precio">
-                    $50
-                </p>
-                <h3>Pase para todos los días</h3>
-                <div class="descripcion">
-                    <p><i class="fas fa-check"></i> Bocadillos gratis</p>
-                    <p><i class="fas fa-check"></i>Todas las conferencias</p>
-                    <p><i class="fas fa-check"></i>Todos los talleres</p>
-                </div>
-                <a href="" class="boton boton-comprar">comprar</a>
-            </div>
-
-            <div class="tarjeta">
-                <p class="precio">
-                    $45
-                </p>
-                <h3>Pase por tres los días</h3>
-                <div class="descripcion">
-                    <p><i class="fas fa-check"></i> Bocadillos gratis</p>
-                    <p><i class="fas fa-check"></i>Todas las conferencias</p>
-                    <p><i class="fas fa-check"></i>Todos los talleres</p>
-                </div>
-                <a href="" class="boton  boton-comprar">comprar</a>
+                <a href="registro.php" class="boton  boton-comprar">comprar</a>
             </div>
         </div>
     </section>
@@ -346,59 +278,4 @@
         </div>
     </section>
 
-    <footer class="site-footer">
-        <div class="contenedor">
-            <div class="footer-informacion">
-                <h3>Sobre <span>WebCamp</span></h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo adipisci, ducimus deserunt reiciendis aperiam dignissimos perferendis cum totam voluptas iure, molestias soluta est aspernatur unde sequi quos error perspiciatis?</p>
-            </div>
-            <div class="ultimos-tweets">
-                <h3>Ultimos <span>tweets</span></h3>
-                <ul>
-                    <li>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, accusantium?</p>
-                    </li>
-                    <li>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, accusantium?</p>
-                    </li>
-
-                </ul>
-            </div>
-            <div class="menu">
-                <h3>Redes <span>sociales</span></h3>
-                <nav class="redes-sociales">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </nav>
-            </div>
-        </div>
-    </footer>
-
-
-    <script src="/js/vendor/modernizr-3.11.2.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/jquery.animateNumber.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="/js/main.js"></script>
-
-
-
-
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <script>
-        window.ga = function() {
-            ga.q.push(arguments)
-        };
-        ga.q = [];
-        ga.l = +new Date;
-        ga('create', 'UA-XXXXX-Y', 'auto');
-        ga('set', 'anonymizeIp', true);
-        ga('set', 'transport', 'beacon');
-        ga('send', 'pageview')
-    </script>
-    <script src="https://www.google-analytics.com/analytics.js" async></script>
-</body>
-
-</html>
+    <?php include_once 'includes/templates/footer.php'; ?>
